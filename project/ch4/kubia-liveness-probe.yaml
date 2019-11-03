@@ -6,7 +6,8 @@ spec:
   containers:
   - image: luksa/kubia-unhealthy
     name: kubia
-    livesnessProbe:
+    livenessProbe:
      httpGet:
       path: /
       port: 8080
+      initialDelaySeconds: 15
